@@ -1,0 +1,66 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-05-01T03:05:15.888Z",
+        "line": 3,
+        "name": "Test scenario",
+        "description": "",
+        "id": "test;test-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1013449090,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I have valid authentication token to access api",
+            "match": {
+              "location": "TestSteps.thisIsTest()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 68877155,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I fetch all tasks",
+            "match": {
+              "location": "TestSteps.useTheToken()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9582203,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I should get the status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "CommonSteps.iShouldGetTheStatusCode(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Test",
+    "description": "",
+    "id": "test",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Test.feature",
+    "tags": []
+  }
+]
