@@ -49,7 +49,7 @@ public class TestSteps {
 
     @Then("the task should be updated")
     public void theTaskShouldBeUpdated(Map<String,String> data) throws JsonProcessingException {
-        DataTask dataTask = taskContext.mapTask();
+        DataTask dataTask = taskContext.parseJsonResponseTask();
 
         softAssertions.assertThat(data.get("title")).as("Title is not updated")
                 .isEqualTo(dataTask.getData().getTitle());

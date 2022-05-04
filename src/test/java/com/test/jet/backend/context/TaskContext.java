@@ -5,7 +5,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.test.jet.backend.model.Data;
 import com.test.jet.backend.model.DataTask;
 import com.test.jet.backend.model.Payload;
-import com.test.jet.backend.model.Tasks;
 import com.test.jet.backend.restclient.HttpRestClient;
 import io.restassured.http.Method;
 
@@ -36,10 +35,6 @@ public class TaskContext extends CommonContext{
         httpRestClient.sendHttpRequest(Method.PUT,GET_TASK_ENDPOINT+"/"+taskId);
     }
 
-    public DataTask mapTask() throws JsonProcessingException {
-        return parseJsonResponseTask();
-    }
-
     private Payload generatePayload(Map<String,String> data){
         Payload payload = new Payload();
         payload.setTitle(data.get("title"));
@@ -47,12 +42,11 @@ public class TaskContext extends CommonContext{
         return payload;
     }
 
-    private DataTask parseJsonResponseTask() throws JsonProcessingException {
-        return httpRestClient.getResponseBody().as(DataTask.class);
+    public DataTask parseJsonResponseTask() {
+        return parseJsonResponseData(httpRestClient.getResponseBody(),DataTask.class);
     }
 
-    private Data parseJsonResponseData() throws JsonProcessingException {
-        return httpRestClient.getResponseBody().as(Data.class);
+    public Data parseJsonResponseData() {
+        return parseJsonResponseData(httpRestClient.getResponseBody(),Data.class);
     }
-
 }
