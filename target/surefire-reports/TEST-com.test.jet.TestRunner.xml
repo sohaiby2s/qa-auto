@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.test.jet.TestRunner" time="2.348" tests="3" errors="0" skipped="0" failures="1">
+<testsuite name="com.test.jet.TestRunner" time="2.095" tests="3" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.2+0"/>
@@ -57,9 +57,9 @@
     <property name="java.vendor.version" value="Homebrew"/>
     <property name="sun.stdout.encoding" value="UTF-8"/>
   </properties>
-  <testcase name="Validate that all task for the user is retrieving successfully" classname="Task" time="1.63"/>
-  <testcase name="Validate that the task should not be updated for the device id not found" classname="Task" time="0.117"/>
-  <testcase name="Validate that the task is successfully updating" classname="Task" time="0.601">
+  <testcase name="Validate that all task for the user is retrieving successfully" classname="Task" time="1.419"/>
+  <testcase name="Validate that the task should not be updated for the device id not found" classname="Task" time="0.106"/>
+  <testcase name="Validate that the task is successfully updating" classname="Task" time="0.57">
     <failure message="&#10;The following 2 assertions failed:&#10;1) [Title is not updated] expected:&lt;&quot;[Culpa nulla suscipit sequi est beatae omnis ipsa repellat.]&quot;&gt; but was:&lt;&quot;[hello test]&quot;&gt;&#10;2) [Is completed not updated] expected:&lt;[false]&gt; but was:&lt;[&quot;true&quot;]&gt;&#10;" type="org.assertj.core.api.SoftAssertionError"><![CDATA[org.assertj.core.api.SoftAssertionError: 
 The following 2 assertions failed:
 1) [Title is not updated] expected:<"[Culpa nulla suscipit sequi est beatae omnis ipsa repellat.]"> but was:<"[hello test]">
@@ -69,20 +69,20 @@ The following 2 assertions failed:
 	at org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:37)
 	at org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:42)
 	at com.test.jet.backend.stepdefinitions.TestSteps.theTaskShouldBeUpdated(TestSteps.java:58)
-	at ✽.the task should be updated(file:src/test/resources/features/Test.feature:27)
+	at ✽.the task should be updated(file:src/test/resources/features/Task.feature:27)
 ]]></failure>
     <system-out><![CDATA[
-  Scenario Outline: Validate that the task is successfully updating &amp#27;[90m# src/test/resources/features/Test.feature:22&amp#27;[0m
+  Scenario Outline: Validate that the task is successfully updating &amp#27;[90m# src/test/resources/features/Task.feature:22&amp#27;[0m
     &amp#27;[36mWhen I update the task <id> with the following parameters&amp#27;[0m
     &amp#27;[36mThen I should get the status code 200&amp#27;[0m
     &amp#27;[36mAnd the task should be updated&amp#27;[0m
 
     Examples: 
 
-  Background:                                             &amp#27;[90m# src/test/resources/features/Test.feature:3&amp#27;[0m
+  Background:                                             &amp#27;[90m# src/test/resources/features/Task.feature:3&amp#27;[0m
     &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have valid authentication token to access api&amp#27;[0m &amp#27;[90m# TestSteps.thisIsTest()&amp#27;[0m
 
-  Scenario Outline: Validate that the task is successfully updating &amp#27;[90m# src/test/resources/features/Test.feature:33&amp#27;[0m
+  Scenario Outline: Validate that the task is successfully updating &amp#27;[90m# src/test/resources/features/Task.feature:33&amp#27;[0m
     &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI update the task &amp#27;[0m&amp#27;[32m&amp#27;[1m1001&amp#27;[0m&amp#27;[32m with the following parameters&amp#27;[0m       &amp#27;[90m# TestSteps.iUpdateTheTaskWithTheFollowingParameters(int,String,String>)&amp#27;[0m
     &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should get the status code &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                           &amp#27;[90m# CommonSteps.iShouldGetTheStatusCode(Integer)&amp#27;[0m
     &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mthe task should be updated&amp#27;[0m                                  &amp#27;[90m# TestSteps.theTaskShouldBeUpdated(String,String>)&amp#27;[0m
@@ -95,7 +95,7 @@ The following 2 assertions failed:
 	at org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:37)
 	at org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:42)
 	at com.test.jet.backend.stepdefinitions.TestSteps.theTaskShouldBeUpdated(TestSteps.java:58)
-	at ✽.the task should be updated(file:src/test/resources/features/Test.feature:27)
+	at ✽.the task should be updated(file:src/test/resources/features/Task.feature:27)
 &amp#27;[0m
 ]]></system-out>
   </testcase>

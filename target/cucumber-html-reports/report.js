@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Test.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Task.feature");
 formatter.feature({
   "name": "Task",
   "description": "",
@@ -298,7 +298,7 @@ formatter.match({
   "location": "TestSteps.theTaskShouldBeUpdated(String,String\u003e)"
 });
 formatter.result({
-  "error_message": "org.assertj.core.api.SoftAssertionError: \nThe following 2 assertions failed:\n1) [Title is not updated] expected:\u003c\"[Culpa nulla suscipit sequi est beatae omnis ipsa repellat.]\"\u003e but was:\u003c\"[hello test]\"\u003e\n2) [Is completed not updated] expected:\u003c[false]\u003e but was:\u003c[\"true\"]\u003e\n\n\tat org.assertj.core.error.AssertionErrorCreator.multipleSoftAssertionsError(AssertionErrorCreator.java:100)\n\tat org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:37)\n\tat org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:42)\n\tat com.test.jet.backend.stepdefinitions.TestSteps.theTaskShouldBeUpdated(TestSteps.java:58)\n\tat ✽.the task should be updated(file:src/test/resources/features/Test.feature:27)\n",
+  "error_message": "org.assertj.core.api.SoftAssertionError: \nThe following 2 assertions failed:\n1) [Title is not updated] expected:\u003c\"[Culpa nulla suscipit sequi est beatae omnis ipsa repellat.]\"\u003e but was:\u003c\"[hello test]\"\u003e\n2) [Is completed not updated] expected:\u003c[false]\u003e but was:\u003c[\"true\"]\u003e\n\n\tat org.assertj.core.error.AssertionErrorCreator.multipleSoftAssertionsError(AssertionErrorCreator.java:100)\n\tat org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:37)\n\tat org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:42)\n\tat com.test.jet.backend.stepdefinitions.TestSteps.theTaskShouldBeUpdated(TestSteps.java:58)\n\tat ✽.the task should be updated(file:src/test/resources/features/Task.feature:27)\n",
   "status": "failed"
 });
 });

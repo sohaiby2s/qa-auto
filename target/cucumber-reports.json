@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1458287930,
+              "duration": 1239275548,
               "status": "passed"
             },
             "line": 4,
@@ -24,7 +24,7 @@
         ]
       },
       {
-        "start_timestamp": "2022-05-04T11:38:58.806Z",
+        "start_timestamp": "2022-05-04T13:23:55.222Z",
         "line": 6,
         "name": "Validate that all task for the user is retrieving successfully",
         "description": "",
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 76447238,
+              "duration": 77145318,
               "status": "passed"
             },
             "line": 7,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 9369925,
+              "duration": 8264918,
               "status": "passed"
             },
             "line": 8,
@@ -64,7 +64,7 @@
           },
           {
             "result": {
-              "duration": 75521864,
+              "duration": 81202506,
               "status": "passed"
             },
             "line": 9,
@@ -85,7 +85,7 @@
         "steps": [
           {
             "result": {
-              "duration": 64381970,
+              "duration": 57280591,
               "status": "passed"
             },
             "line": 4,
@@ -98,7 +98,7 @@
         ]
       },
       {
-        "start_timestamp": "2022-05-04T11:39:00.437Z",
+        "start_timestamp": "2022-05-04T13:23:56.642Z",
         "line": 19,
         "name": "Validate that the task should not be updated for the device id not found",
         "description": "",
@@ -108,7 +108,7 @@
         "steps": [
           {
             "result": {
-              "duration": 45313352,
+              "duration": 43911859,
               "status": "passed"
             },
             "line": 12,
@@ -140,7 +140,7 @@
           },
           {
             "result": {
-              "duration": 806425,
+              "duration": 618727,
               "status": "passed"
             },
             "line": 15,
@@ -167,7 +167,7 @@
         "steps": [
           {
             "result": {
-              "duration": 51607939,
+              "duration": 50222030,
               "status": "passed"
             },
             "line": 4,
@@ -180,7 +180,7 @@
         ]
       },
       {
-        "start_timestamp": "2022-05-04T11:39:00.554Z",
+        "start_timestamp": "2022-05-04T13:23:56.750Z",
         "line": 33,
         "name": "Validate that the task is successfully updating",
         "description": "",
@@ -190,7 +190,7 @@
         "steps": [
           {
             "result": {
-              "duration": 65457411,
+              "duration": 44059280,
               "status": "passed"
             },
             "line": 23,
@@ -222,7 +222,7 @@
           },
           {
             "result": {
-              "duration": 454187,
+              "duration": 447826,
               "status": "passed"
             },
             "line": 26,
@@ -240,8 +240,8 @@
           },
           {
             "result": {
-              "error_message": "org.assertj.core.api.SoftAssertionError: \nThe following 2 assertions failed:\n1) [Title is not updated] expected:\u003c\"[Culpa nulla suscipit sequi est beatae omnis ipsa repellat.]\"\u003e but was:\u003c\"[hello test]\"\u003e\n2) [Is completed not updated] expected:\u003c[false]\u003e but was:\u003c[\"true\"]\u003e\n\n\tat org.assertj.core.error.AssertionErrorCreator.multipleSoftAssertionsError(AssertionErrorCreator.java:100)\n\tat org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:37)\n\tat org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:42)\n\tat com.test.jet.backend.stepdefinitions.TestSteps.theTaskShouldBeUpdated(TestSteps.java:58)\n\tat ✽.the task should be updated(file:src/test/resources/features/Test.feature:27)\n",
-              "duration": 474688842,
+              "error_message": "org.assertj.core.api.SoftAssertionError: \nThe following 2 assertions failed:\n1) [Title is not updated] expected:\u003c\"[Culpa nulla suscipit sequi est beatae omnis ipsa repellat.]\"\u003e but was:\u003c\"[hello test]\"\u003e\n2) [Is completed not updated] expected:\u003c[false]\u003e but was:\u003c[\"true\"]\u003e\n\n\tat org.assertj.core.error.AssertionErrorCreator.multipleSoftAssertionsError(AssertionErrorCreator.java:100)\n\tat org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:37)\n\tat org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:42)\n\tat com.test.jet.backend.stepdefinitions.TestSteps.theTaskShouldBeUpdated(TestSteps.java:58)\n\tat ✽.the task should be updated(file:src/test/resources/features/Task.feature:27)\n",
+              "duration": 466361777,
               "status": "failed"
             },
             "line": 27,
@@ -272,7 +272,7 @@
     "description": "",
     "id": "task",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Test.feature",
+    "uri": "file:src/test/resources/features/Task.feature",
     "tags": []
   }
 ]
