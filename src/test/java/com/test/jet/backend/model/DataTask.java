@@ -4,6 +4,5 @@ import lombok.Data;
 
 @Data
 public class DataTask {
-
     private Tasks data;
 }

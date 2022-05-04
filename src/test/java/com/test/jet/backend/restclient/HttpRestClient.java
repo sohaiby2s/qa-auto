@@ -19,10 +19,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class HttpRestClient {
 
+    public static Integer statusCode;
     private RequestSpecification requestSpecification;
     private ResponseBody responseBody;
-    public static Integer statusCode;
-    private Response response;
 
     public HttpRestClient() {
         RestAssured.baseURI = ConfigReader.API_URL;
@@ -36,7 +35,7 @@ public class HttpRestClient {
      * This method calls the Rest API
      */
     public void sendHttpRequest(Method method, String endpoint) {
-        response = requestSpecification.request(method, endpoint);
+        Response response = requestSpecification.request(method, endpoint);
         setResponseBody(response.getBody());
         statusCode = response.getStatusCode();
     }
@@ -57,11 +56,11 @@ public class HttpRestClient {
         this.responseBody = responseBody;
     }
 
-    public void addToken(String oauthToken){
+    public void addToken(String oauthToken) {
         requestSpecification.auth().oauth2(oauthToken);
     }
 
-    public Integer getStatusCode(){
+    public Integer getStatusCode() {
         return statusCode;
     }
 

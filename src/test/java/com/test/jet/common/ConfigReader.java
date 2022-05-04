@@ -7,14 +7,15 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.File;
 import java.io.IOException;
 
+
 /**
  * ConfigParser parse the configuration file and pass configuration properties to required functionalities
  */
 public class ConfigReader {
 
-    public static final String API_URL = getConfigReader().get("url").asText();
-
+    public static final String CONFIG_PATH = "src/test/resources/configurations/configurations.json";
     private static JsonNode jsonNode;
+    public static final String API_URL = getConfigReader().get("url").asText();
 
     private ConfigReader() {
     }
@@ -22,7 +23,7 @@ public class ConfigReader {
     public static JsonNode getConfigReader() {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            jsonNode = objectMapper.readTree(new File("src/test/resources/configurations/configurations.json"));
+            jsonNode = objectMapper.readTree(new File(CONFIG_PATH));
             jsonNode = jsonNode.get(getEnv());
         } catch (IOException e) {
             e.printStackTrace();
