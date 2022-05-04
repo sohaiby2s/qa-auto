@@ -12,8 +12,29 @@ This framework is used to automate rest api for task by using Cucumber and Rest 
 This framework requires following
 * Java 14
 * Maven
-* Docker
+* [Docker](https://www.docker.com) >= 17.06 CE
+* [Docker Compose](https://docs.docker.com/compose/install/)
+* Makefile support
 ## Setup
+### Docker configuration
+
+#### Initial run
+```bash
+make install
+```
+This will take some time because it'll seed database with a lot of test data.
+After install you can check application health: http://localhost:8000/health-check
+
+#### Stopping application
+```bash
+make stop
+```
+
+Restart with fresh db seeds:
+```
+make restart
+```
+
 ### Run Locally
 The project is hosted on Github. It can be either downloaded as a zip file or cloned.
 
@@ -67,7 +88,8 @@ A detailed Cucumber JVM report is being generated after every execution on follo
 | TC3        | Validate that the task is successfully updating   | FAIL   |
 
 ## Issues found
-
+Following issues are found:
+* Api is not updating the values so the test case to update Api is failing.
 ## Framework structure
 ### Configuration file
 configuration.json file iks placed under resources/configurations folder containing environments and user credentials 
