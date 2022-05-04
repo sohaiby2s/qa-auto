@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.test.jet.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.325 sec <<< FAILURE! - in com.test.jet.TestRunner
-Validate that the task is successfully updating(Task)  Time elapsed: 0.574 sec  <<< FAILURE!
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.818 sec <<< FAILURE! - in com.test.jet.TestRunner
+Validate that the task is successfully updating(Task)  Time elapsed: 0.601 sec  <<< FAILURE!
 org.assertj.core.api.SoftAssertionError: 
 The following 2 assertions failed:
 1) [Title is not updated] expected:<"[Culpa nulla suscipit sequi est beatae omnis ipsa repellat.]"> but was:<"[hello test]">

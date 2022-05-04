@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1044431138,
+              "duration": 1458287930,
               "status": "passed"
             },
             "line": 4,
@@ -24,7 +24,7 @@
         ]
       },
       {
-        "start_timestamp": "2022-05-04T11:14:57.932Z",
+        "start_timestamp": "2022-05-04T11:38:58.806Z",
         "line": 6,
         "name": "Validate that all task for the user is retrieving successfully",
         "description": "",
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 140198100,
+              "duration": 76447238,
               "status": "passed"
             },
             "line": 7,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 7993613,
+              "duration": 9369925,
               "status": "passed"
             },
             "line": 8,
@@ -64,7 +64,7 @@
           },
           {
             "result": {
-              "duration": 62798429,
+              "duration": 75521864,
               "status": "passed"
             },
             "line": 9,
@@ -85,7 +85,7 @@
         "steps": [
           {
             "result": {
-              "duration": 56183077,
+              "duration": 64381970,
               "status": "passed"
             },
             "line": 4,
@@ -98,7 +98,7 @@
         ]
       },
       {
-        "start_timestamp": "2022-05-04T11:14:59.200Z",
+        "start_timestamp": "2022-05-04T11:39:00.437Z",
         "line": 19,
         "name": "Validate that the task should not be updated for the device id not found",
         "description": "",
@@ -108,7 +108,7 @@
         "steps": [
           {
             "result": {
-              "duration": 51582932,
+              "duration": 45313352,
               "status": "passed"
             },
             "line": 12,
@@ -140,7 +140,7 @@
           },
           {
             "result": {
-              "duration": 618102,
+              "duration": 806425,
               "status": "passed"
             },
             "line": 15,
@@ -167,7 +167,7 @@
         "steps": [
           {
             "result": {
-              "duration": 54704875,
+              "duration": 51607939,
               "status": "passed"
             },
             "line": 4,
@@ -180,7 +180,7 @@
         ]
       },
       {
-        "start_timestamp": "2022-05-04T11:14:59.315Z",
+        "start_timestamp": "2022-05-04T11:39:00.554Z",
         "line": 33,
         "name": "Validate that the task is successfully updating",
         "description": "",
@@ -190,7 +190,7 @@
         "steps": [
           {
             "result": {
-              "duration": 41898400,
+              "duration": 65457411,
               "status": "passed"
             },
             "line": 23,
@@ -222,7 +222,7 @@
           },
           {
             "result": {
-              "duration": 476233,
+              "duration": 454187,
               "status": "passed"
             },
             "line": 26,
@@ -241,7 +241,7 @@
           {
             "result": {
               "error_message": "org.assertj.core.api.SoftAssertionError: \nThe following 2 assertions failed:\n1) [Title is not updated] expected:\u003c\"[Culpa nulla suscipit sequi est beatae omnis ipsa repellat.]\"\u003e but was:\u003c\"[hello test]\"\u003e\n2) [Is completed not updated] expected:\u003c[false]\u003e but was:\u003c[\"true\"]\u003e\n\n\tat org.assertj.core.error.AssertionErrorCreator.multipleSoftAssertionsError(AssertionErrorCreator.java:100)\n\tat org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:37)\n\tat org.assertj.core.api.AbstractSoftAssertions.assertAll(AbstractSoftAssertions.java:42)\n\tat com.test.jet.backend.stepdefinitions.TestSteps.theTaskShouldBeUpdated(TestSteps.java:58)\n\tat ✽.the task should be updated(file:src/test/resources/features/Test.feature:27)\n",
-              "duration": 468277208,
+              "duration": 474688842,
               "status": "failed"
             },
             "line": 27,
