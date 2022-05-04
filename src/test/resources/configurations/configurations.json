@@ -1,14 +1,22 @@
 {
   "dev1": {
-    "url": "http://localhost:8000"
+    "url": "http://localhost:8000",
+    "username": "test@test.com",
+    "password": "4nak1n"
   },
   "dev2": {
-    "url": "http://localhost:8000"
+    "url": "http://localhost:8000",
+    "username": "test@test.com",
+    "password": "4nak1n"
   },
   "uat": {
-    "url": "http://localhost:8000"
+    "url": "http://localhost:8000",
+    "username": "test@test.com",
+    "password": "4nak1n"
   },
   "prod": {
-    "url": "http://localhost:8000"
+    "url": "http://localhost:8000",
+    "username": "test@test.com",
+    "password": "4nak1n"
   }
 }

@@ -11,7 +11,7 @@ public class CommonSteps {
     HttpRestClient httpRestClient;
 
     @Then("I should get the status code {int}")
-    public void iShouldGetTheStatusCode(Integer status){
-        Assert.assertEquals(status,httpRestClient.getStatusCode());
+    public void iShouldGetTheStatusCode(Integer status) {
+        Assert.assertEquals(status, httpRestClient.getStatusCode());
     }
 }
