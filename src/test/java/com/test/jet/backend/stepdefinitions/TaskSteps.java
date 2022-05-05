@@ -5,7 +5,6 @@ import com.test.jet.backend.context.AuthenticationContext;
 import com.test.jet.backend.context.TaskContext;
 import com.test.jet.backend.model.DataTask;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.assertj.core.api.Assertions;
@@ -14,21 +13,14 @@ import org.assertj.core.api.SoftAssertions;
 import java.util.Map;
 
 
-public class TestSteps {
+public class TaskSteps {
 
-    AuthenticationContext authenticationContext = new AuthenticationContext();
     TaskContext taskContext = new TaskContext();
     SoftAssertions softAssertions = new SoftAssertions();
 
-
-    @Given("I have valid authentication token to access api")
-    public void thisIsTest() {
-        authenticationContext.generateToken();
-    }
-
     @When("I fetch all tasks")
     public void useTheToken() {
-        taskContext.getTask();
+        taskContext.getTask(AuthenticationContext.token);
     }
 
     @And("I should receive all the tasks for the user")
@@ -51,5 +43,20 @@ public class TestSteps {
         softAssertions.assertThat(data.get("is_completed")).as("Is completed not updated")
                 .isEqualTo(dataTask.getData().is_completed());
         softAssertions.assertAll();
+    }
+
+    @When("I pass the invalid token to fetch the tasks")
+    public void iShouldPassTheInvalidToken(Map<String,String> token){
+        taskContext.getTask(token.get("token"));
+    }
+
+    @When("I pass the previously generated token to fetch the tasks")
+    public void iPassThePreviouslyGeneratedTokenToFetchTheTasks(){
+        taskContext.getTask(AuthenticationContext.originalToken);
+    }
+
+    @When("I fetch all tasks by passing modified token")
+    public void iFetchAllTasksByPassingModifiedToken(){
+        taskContext.getTask(AuthenticationContext.token);
     }
 }

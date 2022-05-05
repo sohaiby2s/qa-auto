@@ -16,9 +16,9 @@ public class TaskContext extends CommonContext {
     private final HttpRestClient httpRestClient = new HttpRestClient();
 
 
-    public void getTask() {
+    public void getTask(String token) {
         httpRestClient.initRestAPI();
-        httpRestClient.addToken(AuthenticationContext.token);
+        httpRestClient.addToken(token);
         httpRestClient.sendHttpRequest(Method.GET, GET_TASK_ENDPOINT);
 
     }

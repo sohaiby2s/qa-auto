@@ -13,7 +13,6 @@ Feature: Task
       |title        |<title>          |
       |is_completed |<is_completed>   |
     Then I should get the status code 404
-
     Examples:
       |id    |title           |is_completed    |
       |1111  |hello test      |true            |
@@ -27,7 +26,6 @@ Feature: Task
     And the task should be updated
     |title       |<title>        |
     |is_completed|<is_completed> |
-
     Examples:
     |id    |title           |is_completed    |
     |1001  |hello test      |true            |

@@ -77,19 +77,25 @@ A detailed Cucumber JVM report is being generated after every execution on follo
 > * target/cucumber-JVM-reports/cucumber-html-reports/report-feature_{uniqueId}.html
 
 ## TEST SCENARIOS
-* Validate that all task for the user is retrieving successfully
-* Validate that the task should not be updated for the device id not found
-* Validate that the task is successfully updating
+
+Following test scenarios are automated
 
 | TestCase # | Description | Status |
 |------------|-------------|--------|
 | TC1        | Validate that all task for the user is retrieving successfully  | PASS   |
 | TC2        | Validate that the task should not be updated for the device id not found   | PASS   | 
 | TC3        | Validate that the task is successfully updating   | FAIL   |
+| TC4        | Verify that the valid token is successfully generating if valid credentials are provided   | PASS   |
+| TC5        | Verify that the valid token is not generating if invalid credentials are provided  | PASS   |
+| TC6        | Verify authentication failure message if the an invalid token is provided to the fetch the tasks   | PASS   |
+| TC7        | Verify that the previous token should be invalid if new token is generated   | FAIL   |
+| TC8        | Verify token should be invalidated if any modification is done in the generated token   | FAIL   |
 
 ## Issues found
 Following issues are found:
 * Api is not updating the values so the test case to update Api is failing.
+* Api is not making previously generated token as an invalid and allowing to use previously generating token
+* Api is wrongly accepting the modified token requests
 ## Framework structure
 ### Configuration file
 configuration.json file iks placed under resources/configurations folder containing environments and user credentials 
