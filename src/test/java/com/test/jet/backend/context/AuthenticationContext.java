@@ -5,8 +5,9 @@ import com.test.jet.backend.model.Login;
 import com.test.jet.backend.restclient.HttpRestClient;
 import com.test.jet.common.ConfigReader;
 import io.restassured.http.Method;
+import org.springframework.stereotype.Component;
 
-
+@Component
 public class AuthenticationContext extends CommonContext {
 
 
@@ -32,23 +33,23 @@ public class AuthenticationContext extends CommonContext {
         return login;
     }
 
-    public Login getInvalidLoginData(){
+    public Login getInvalidLoginData() {
         Login login = new Login();
         login.setEmail("abc@test.com");
         login.setPassword("1234567");
         return login;
     }
 
-    public String getAuthErrorMessage(){
+    public String getAuthErrorMessage() {
         Error error = parseJsonResponseData(httpRestClient.getResponseBody(), Error.class);
         return error.getErrors().getEmail();
     }
 
-    public void setOriginalToken(){
+    public void setOriginalToken() {
         originalToken = AuthenticationContext.token;
     }
 
-    public void modifyExistingToken(String text){
-        token = token+text;
+    public void modifyExistingToken(String text) {
+        token = token + text;
     }
 }

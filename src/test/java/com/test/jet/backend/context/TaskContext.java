@@ -6,10 +6,11 @@ import com.test.jet.backend.model.DataTask;
 import com.test.jet.backend.model.Payload;
 import com.test.jet.backend.restclient.HttpRestClient;
 import io.restassured.http.Method;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
-
+@Component
 public class TaskContext extends CommonContext {
 
     private static final String GET_TASK_ENDPOINT = "api/v1/tasks";

@@ -9,13 +9,16 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.api.SoftAssertions;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Map;
 
 
 public class TaskSteps {
 
-    TaskContext taskContext = new TaskContext();
+    @Autowired
+    TaskContext taskContext;
+
     SoftAssertions softAssertions = new SoftAssertions();
 
     @When("I fetch all tasks")
@@ -46,17 +49,17 @@ public class TaskSteps {
     }
 
     @When("I pass the invalid token to fetch the tasks")
-    public void iShouldPassTheInvalidToken(Map<String,String> token){
+    public void iShouldPassTheInvalidToken(Map<String, String> token) {
         taskContext.getTask(token.get("token"));
     }
 
     @When("I pass the previously generated token to fetch the tasks")
-    public void iPassThePreviouslyGeneratedTokenToFetchTheTasks(){
+    public void iPassThePreviouslyGeneratedTokenToFetchTheTasks() {
         taskContext.getTask(AuthenticationContext.originalToken);
     }
 
     @When("I fetch all tasks by passing modified token")
-    public void iFetchAllTasksByPassingModifiedToken(){
+    public void iFetchAllTasksByPassingModifiedToken() {
         taskContext.getTask(AuthenticationContext.token);
     }
 }
