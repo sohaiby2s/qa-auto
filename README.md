@@ -78,7 +78,7 @@ A detailed Cucumber JVM report is being generated after every execution on follo
 
 ## TEST SCENARIOS
 
-Following test scenarios are automated
+Following are the test scenarios
 
 | TestCase # | Description | Status |
 |------------|-------------|--------|
@@ -90,12 +90,17 @@ Following test scenarios are automated
 | TC6        | Verify authentication failure message if the an invalid token is provided to the fetch the tasks   | PASS   |
 | TC7        | Verify that the previous token should be invalid if new token is generated   | FAIL   |
 | TC8        | Verify token should be invalidated if any modification is done in the generated token   | FAIL   |
+| TC9        | Validate that the token should be expired after 30 min   | FAIL   |
 
 ## Issues found
 Following issues are found:
 * Api is not updating the values so the test case to update Api is failing.
 * Api is not making previously generated token as an invalid and allowing to use previously generating token
 * Api is wrongly accepting the modified token requests
+* Token is not expiring after 30 min
+
+## Test Execution Report
+A detailed test execution report has been added **Test-Execution-Report-JET.pdf**
 ## Framework structure
 ### Configuration file
 configuration.json file iks placed under resources/configurations folder containing environments and user credentials 
